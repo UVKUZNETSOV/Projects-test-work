@@ -1,0 +1,78 @@
+$profile-padd: 16px;
+
+.profile {
+  width: 240px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: $profile-padd;
+    border-bottom: 2px solid #DFE3E9;
+    &-user {
+      display: flex;
+      flex-direction: column;
+      color: #354052;
+      font-family: 'Golos UI';
+      font-size: 14px;
+      font-weight: 700;
+      span {
+        font-family: 'Golos UI';
+        font-weight: normal;
+        color: #7F8FA4;
+        font-size: 12px;
+      }
+    }
+  }
+  &__timer {
+    background-color: #EFF3F6;
+    padding: $profile-padd;
+    display: flex;
+    gap: 0 8px;
+    align-items: center;
+    span { 
+      font-family: 'Golos UI';
+      font-size: 16px;
+      font-weight: 700;
+      color: #0085F0;
+    }
+    &-starttime {
+      font-family: 'Golos UI';
+      font-size: 18px;
+      font-weight: normal;
+      color: #516173;
+
+    }
+    &-time {
+      font-family: 'Golos UI';
+      font-size: 16px;
+      font-weight: 700;
+      color: #516173;
+      color: #354052;
+    }
+    &-btn {
+      cursor: pointer;
+    }
+  }
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 0;
+    &-btn {
+      display: flex;
+      width: 100%;
+      gap: 0 7px;
+      padding: 10px 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: #EFF3F6;
+      }
+      p {
+        font-family: 'Golos UI';
+        font-size: 14px;
+        font-weight: 500;
+        color: #354052;
+      }
+    }
+  }
+}

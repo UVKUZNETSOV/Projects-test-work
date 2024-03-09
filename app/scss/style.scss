@@ -1,0 +1,360 @@
+$frame-padd: 56px;
+$hr-color: #516173;
+
+@font-face {
+  font-family: "Golos UI";
+  font-display: swap;
+  src: url("../fonts/golos-ui_regular.eot");
+  src: local("0"), url("../fonts/golos-ui_regular.woff") format("woff"),
+  url("../fonts/golos-ui_regular.ttf") format("truetype"),
+  ur1("…./fonts/golos-ui_regular.svg") format("svg");
+  font-weight: normal; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Golos UI";
+  font-display: swap;
+  src: url("../fonts/golos-ui_medium.eot");
+  src: local("0"), url("../fonts/golos-ui_medium.woff") format("woff"),
+  url("../fonts/golos-ui_medium.ttf") format("truetype"),
+  ur1("…./fonts/golos-ui_medium.svg") format("svg");
+  font-weight: 500; 
+  font-style: 500;
+}
+
+@font-face {
+  font-family: "Golos UI";
+  font-display: swap;
+  src: url("../fonts/golos-ui_bold.eot");
+  src: local("0"), url("../fonts/golos-ui_bold.woff") format("woff"),
+  url("../fonts/golos-ui_bold.ttf") format("truetype"),
+  ur1("…./fonts/golos-ui_bold.svg") format("svg");
+  font-weight: 700; 
+  font-style: 700;
+}
+
+@font-face {
+  font-family: "Golos Text";
+  font-display: swap;
+  src: url("../fonts/GolosText-Regular.eot");
+  src: local("0"), url("../fonts/GolosText-Regular.woff") format("woff"),
+  url("../fonts/GolosText-Regular.ttf") format("truetype"),
+  ur1("…./fonts/GolosText-Regular.svg") format("svg");
+  font-weight: normal; 
+  font-style: normal;
+}
+
+*, 
+*::before,
+*::after {
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p, a {
+  color: #fff;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+* {
+  font-family: "Golos Text";
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 16px;
+}
+
+.header {
+  position: relative;
+  height: $frame-padd;
+  background-color: #273142;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  gap: 0 25px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    cursor: pointer;
+    &-img {
+      width: 32px;
+    }
+    h2 {
+      font-family: "Golos UI";
+      font-weight: 500;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-radius: 50px;
+    aspect-ratio: 1/1;
+    background-color: #1F8EFA;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &__item{
+      position: relative;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      padding: 0 13px;
+      height: 100%;
+      cursor: pointer;
+      font-family: "Golos UI";
+      font-weight: 500;
+      background: transparent;
+      &:hover {
+        background-color: #354052;
+      }
+    }
+    
+    &__item.active:before{
+      transform-origin: left;
+      transform: scaleX(1);
+      transition: transform 0.25s;
+    }
+    
+    &__item.active:before{
+      content: '';
+      width: 100%;
+      height: 3px;
+      background-color: #3A9EFF;
+      position: absolute;
+      left: 0px;
+      bottom: 0%;
+      transform-origin: right;
+      transition: transform 0.25s;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  width: calc(100svw - $frame-padd);
+  p{
+    color: #000;
+  }
+  &__subheader {
+    height: $frame-padd;
+    border-bottom: 1px solid #DFE3E9;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
+    &-info {
+      display: flex;
+      align-items: center;
+      gap: 0 7px;
+    }
+    span, p, button {
+      font-family: "Golos UI";
+      font-weight: 700;
+      font-size: 16px;
+    }
+    button {
+      background: transparent;
+      text-transform: uppercase;
+      color: #354052;
+    }
+    hr {
+      transform: rotate(90deg);
+      width: 20px;
+      height: 1px;
+      background-color: #DFE3E9;
+    }
+    &-panel {
+      display: flex;
+      align-items: center;
+      gap: 0 20px;
+      button {
+        font-family: "Golos UI";
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #1F8EFA;
+        border-radius: 4px;
+        height: 40px;
+        width: 100px;
+      }
+    }
+  }
+  &__additional{
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+    span { color: #0085F0; }
+    p { color: #354052; }
+    cursor: pointer;
+  }
+}
+
+.dashboard {
+  background-color: #EFF3F6;
+  height: calc(100vh - $frame-padd*2 - 1px);
+  overflow: scroll;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #1F8EFA;
+    border-radius: 20px;
+  }
+}
+
+.widget * {
+  box-sizing: border-box;
+}
+.widget {
+  position: relative;
+  box-sizing: border-box;
+  border: dotted 1px #000;
+  border-radius: 4px;
+  width: 32%;
+  height: 520px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  &__frame {
+    border: none;
+    background-color: #fff;
+  }
+  &__title {
+    font-family: 'Golos UI';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+  &__description {
+    position: relative;
+    border-bottom: 1px solid #DFE3E9;
+    padding: 14px;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 52px;
+    width: 100%;
+    background: rgb(223,227,233);
+    background: linear-gradient(0deg, rgba(223,227,233,1) 15%, rgba(255,255,255,1) 100%);
+    border-top: 1px solid #DFE3E9;
+    p {
+      color: #7F8FA4;
+      font-family: 'Golos UI';
+      font-size: 13px;
+    }
+    &-actions {
+      display: flex;
+      gap: 0 15px;
+    }
+    &-actions_refresh,
+    &-actions_stretch {
+      cursor: pointer;
+    }
+  }
+}
+
+.widget__1 {
+  border-top: 4px solid #3A9EFF;
+}
+
+.widget__2 {
+  border-top: 4px solid #E91E63;
+}
+
+.widget__3 {
+  border-top: 4px solid #FFB300;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  height: 20px;
+  background-color: #DFE3E9;
+  width: calc(100svw - $frame-padd);
+  display: flex;
+  align-items: center;
+  &__info {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    gap: 0 10px;
+    p {
+      font-family: 'Golos UI';
+      font-size: 13px;
+      color: #7F8FA4;
+    }
+  }
+}
+
+.add-btn {
+  background-color: #0085F0;
+  font-family: 'Golos UI';
+  font-size: 14px;
+  font-weight: 700;
+  width: 100px;
+  height: 40px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.head__btn {
+  height: $frame-padd;
+}
+
+.programming-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  width: 300px;
+}
+
+.example-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

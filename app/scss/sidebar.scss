@@ -1,0 +1,75 @@
+$frame-padd: 56px;
+$hr-color: #516173;
+
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+  width: $frame-padd;
+  background-color: #273142;
+  z-index: 5;
+  &__profile {
+    position: relative;
+    font-family: "Golos UI";
+    font-size: 14px;
+    font-weight: 700;
+    box-sizing: border-box;
+    width: $frame-padd;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(210,233,255);
+    background: linear-gradient(0deg, rgba(210,233,255,1) 0%, rgba(255,255,255,1) 35%);
+    cursor: pointer;
+    &:hover {
+      background: rgb(255,255,255);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(210,233,255,1) 86%);
+    }
+    h1 {
+      color: #516173;
+    }
+  }
+  &__menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    transition: all .3s;
+    &:hover {
+      background-color: #000;
+    }
+  }
+  hr {
+    background-color: $hr-color;
+    width: 60%;
+    height: 1px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    hr {
+      background-color: $hr-color;
+      width: 60%;
+      height: 1px;
+    }
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__help {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

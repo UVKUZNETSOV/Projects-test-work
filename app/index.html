@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="website icon" type="svg" href="./img/logo.svg">
+  <title>Test-work</title>
+</head>
+<body>
+  <div class="content">
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo-img" src="./img/logo.svg" alt="">
+        <h2>TProjects</h2>
+      </div>
+      <button class="header__btn">
+        <img src="./img/buttons/plus.svg" alt="">
+      </button>
+      <nav class="nav">
+        <a class="nav__item active" href="">Рабочий стол</a>
+        <a class="nav__item" href="">Сделки</a>
+        <a class="nav__item" href="">Задачи</a>
+        <a class="nav__item" href="">Проекты</a>
+        <a class="nav__item" href="">Контакты</a>
+        <a class="nav__item" href="">Компании</a>
+        <div class="dropdown">
+          <div class="nav__item dropdown-btn">
+            <img src="./img/buttons/accordeon/accordeon-white.svg" alt="">
+          </div>
+          <ul class="dropdown-content dropdown-content_withsett">
+            <li>Календарь</li>
+            <li>Услуги</li>
+            <li>Финансы</li>
+            <li>Документы</li>
+            <li>Сотрудники</li>
+            <li>Медиафайлы</li>
+            <li>
+              <img src="./img/icons/settings-icon.svg" alt="">
+              Настроить меню
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="content__subheader">
+      <div class="content__subheader-info">
+        <button>Работа с задачами</button>
+          <hr>
+          <div class="content__additional">
+            <span>Пт</span>
+            <p>16:50</p>
+          </div>
+          <hr>
+          <div class="content__additional">
+            <img src="./img/weather/weather-icon.svg" alt="">
+            <p>-8°</p>
+          </div>
+      </div>
+      <div class="content__subheader-panel">
+        <img src="./img/buttons/accordeon/accordeon-spacegrey.svg" alt="">
+        <img src="./img/buttons/help/help-spacegrey.svg" alt="">
+        <div class="dropdown">
+          <div class="add-btn dropdown-btn">Добавить</div>
+          <ul class="dropdown-content">
+            <li>Доска</li>
+            <li>Отчёт</li>
+            <li>Разделы</li>
+            <li>Задачи</li>
+            <li>Карта</li>
+            <li>История</li>
+            <li>Сценарии</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard">
+      <div class="widget widget__frame widget__1">
+        <div class="widget__description">
+          <h3 class="widget__title">Распределение задач</h3>
+          <div class="widget__tasks">
+            <p>Задачи</p>
+            <hr>
+          </div>
+        </div>
+        <div class="programming-stats">
+          <div class="chart-container">
+            <canvas class="my-chart"></canvas>
+          </div>
+        </div>
+        <div class="widget__footer">
+          <p>на 15 фев 11:26</p>
+          <div class="widget__footer-actions">
+            <img class="widget__footer-actions_refresh" data-tippy-content="Обновить данные" src="./img/buttons/actions/refresh-button.svg" alt="">
+            <img class="widget__footer-actions_stretch" data-tippy-content="Растянуть" src="./img/buttons/actions/stretch-button.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="widget widget__frame widget__2">
+        <div class="widget__description">
+          <h3 class="widget__title">Воронка сделок</h3>
+          <div class="widget__tasks">
+            <p>Задачи</p>
+            <hr>
+          </div>
+        </div>
+        <div class="example-content">
+          <h1 style="color: #000;"># CONTENT</h1>
+        </div>
+        <div class="widget__footer">
+          <p>на 15 фев 11:26</p>
+          <div class="widget__footer-actions">
+            <img class="widget__footer-actions_refresh" data-tippy-content="Обновить данные" src="./img/buttons/actions/refresh-button.svg" alt="">
+            <img class="widget__footer-actions_stretch" data-tippy-content="Растянуть" src="./img/buttons/actions/stretch-button.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="widget widget__frame widget__3">
+        <div class="widget__description">
+          <h3 class="widget__title">Контакты</h3>
+          <div class="widget__tasks">
+            <p>Задачи</p>
+            <hr>
+          </div>
+        </div>
+        <div class="example-content">
+          <h1 style="color: #000;"># CONTENT</h1>
+        </div>
+        <div class="widget__footer">
+          <p>на 15 фев 11:26</p>
+          <div class="widget__footer-actions">
+            <img class="widget__footer-actions_refresh" data-tippy-content="Обновить данные" src="./img/buttons/actions/refresh-button.svg" alt="">
+            <img class="widget__footer-actions_stretch" data-tippy-content="Растянуть" src="./img/buttons/actions/stretch-button.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="widget"></div>
+      <div class="widget"></div>
+      <div class="widget"></div>
+    </div>
+    <footer class="footer">
+      <div class="footer__info">
+        <p>© 2015-2022 TigerWeb</p>
+        <p>v. 0.0.1</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="sidebar">
+
+    <div class="dropleft">
+      <div class="sidebar__profile dropleft-btn">
+        <h1>В</h1>
+      </div>
+      <div class="dropleft-content profile ">
+        <div class="profile__header">
+          <h4 class="profile__header-user">
+            Владимир
+            <span>
+              Дизайнер
+            </span>
+          </h4>
+          <img src="./img/icons/status/active-atatus.svg" alt="">
+        </div>
+        <div class="profile__timer">
+          <p class="profile__timer-starttime">00:00:00</p>
+          <img class="profile__timer-btn" src="./img/buttons/actions/start-timer-button.svg" alt="">
+          <img src="./img/dividers/divider.svg" alt="">
+          <span>Пт</span>
+          <p class="profile__timer-time">16:50</p>
+        </div>
+        <div class="profile__actions">
+          <div class="profile__actions-btn">
+            <img src="./img/icons/profile/profile-icon.svg" alt="">
+            <p>Мой профиль</p>
+          </div>
+          <div class="profile__actions-btn">
+            <img src="./img/buttons/actions/exit-button.svg" alt="">
+            <p>Выйти из системы</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-list.svg" alt="">
+    </button>
+    <hr>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-messages.svg" alt="">
+    </button>
+    <hr>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-notifications.svg" alt="">
+    </button>
+    <hr>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-timer.svg" alt="">
+    </button>
+    <hr>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-book.svg" alt="">
+    </button>
+    <hr>
+    <button class="sidebar__menu-btn">
+      <img src="./img/sidebar/sidebar-settings.svg" alt="">
+    </button>
+    <button class="sidebar__help">
+      <img src="./img/buttons/help/help-yellow.svg" alt="">
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script src="./js/main.min.js"></script>
+</body>
+</html>
