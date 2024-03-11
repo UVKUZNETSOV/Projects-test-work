@@ -3,6 +3,8 @@ const { src, dest, watch, parallel } = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
+const ghPages = require('gh-pages');
+const path = require('path');
 
 const browserSync = require('browser-sync').create();
 
@@ -60,9 +62,26 @@ function browsersync() {
   });
 }
 
+function build() {
+  return src([
+    'app/css/style.min.css',
+    'app/js/main.min.js',
+    'app/fonts/*',
+    'app/img/*/*/*',
+    'app/*.html'
+  ], {base: 'app'})
+    .pipe(dest('dist'))
+}
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
+}
+
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.build = build;
+exports.deploy = deploy;
 
 exports.default = parallel(styles, scripts, browsersync, watching)
