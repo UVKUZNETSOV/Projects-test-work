@@ -72,6 +72,7 @@ body {
 }
 
 button {
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -187,22 +188,30 @@ button {
     border-bottom: 1px solid #DFE3E9;
     display: flex;
     align-items: center;
-    padding: 0 16px;
     justify-content: space-between;
+    padding: 0 16px;
+
     &-info {
       display: flex;
       align-items: center;
       gap: 0 7px;
+      button {
+        font-family: "Golos UI";
+        font-weight: 700;
+        font-size: 16px;
+        background: transparent;
+        text-transform: uppercase;
+        color: #354052;
+        transition: all .2s;
+        &:hover {
+          color: #1F8EFA;
+        }
+      }
     }
-    span, p, button {
+    span, p {
       font-family: "Golos UI";
       font-weight: 700;
       font-size: 16px;
-    }
-    button {
-      background: transparent;
-      text-transform: uppercase;
-      color: #354052;
     }
     hr {
       transform: rotate(90deg);
@@ -226,6 +235,7 @@ button {
         width: 100px;
       }
     }
+    
   }
   &__additional{
     display: flex;
@@ -234,6 +244,30 @@ button {
     span { color: #0085F0; }
     p { color: #354052; }
     cursor: pointer;
+  }
+  &__tabs {
+    background-color: #fff;
+    top: $frame-padd;
+    height: $frame-padd;
+    display: none;
+    align-items: center;
+    padding: 0 16px;
+    gap: 0 16px;
+    z-index: 2;
+    &-btn {
+      display: flex;
+      align-items: center;
+      font-family: 'Golos UI';
+      font-weight: 700;
+      color: #516173;
+      &:first-child {
+        height: 36px;
+        padding: 12px;
+        border-radius: 4px;
+        background-color: #1F8EFA;
+        color: #fff;
+      }
+    } 
   }
 }
 
@@ -271,13 +305,23 @@ button {
   justify-content: space-between;
   &__frame {
     border: none;
+    // border: 2px solid #DFE3E9;
     background-color: #fff;
   }
   &__title {
     font-family: 'Golos UI';
     font-weight: 500;
     font-size: 16px;
-    color: #000;
+    color: #354052;
+  }
+  &__tasks {
+    display: flex;
+    p {
+      font-family: 'Golos UI';
+      font-size: 14px;
+      font-weight: 500;
+      color: #516173;
+    }
   }
   &__description {
     position: relative;
@@ -382,4 +426,16 @@ button {
 
 .close-btn {
   cursor: pointer;
+}
+
+.tippy-box {
+  background-color: #273142;
+}
+
+.tippy-arrow::before {
+  color: #273142;
+}
+
+.tabs-show {
+  display: flex;
 }
