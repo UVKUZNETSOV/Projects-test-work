@@ -1,16 +1,19 @@
 $profile-padd: 16px;
+$frame-padd: 56px;
 
 .profile {
+  box-sizing: border-box;
   width: 240px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
   &__header {
+    box-sizing: border-box;
     display: flex;
+    height: $frame-padd;
     justify-content: space-between;
-    padding: $profile-padd;
-    border-bottom: 2px solid #DFE3E9;
+    border-bottom: 1px solid #DFE3E9;
+    padding: 0 $profile-padd;
     &-user {
       display: flex;
+      justify-content: center;
       flex-direction: column;
       color: #354052;
       font-family: 'Golos UI';
@@ -26,7 +29,8 @@ $profile-padd: 16px;
   }
   &__timer {
     background-color: #EFF3F6;
-    padding: $profile-padd;
+    padding: 0 $profile-padd;
+    height: $frame-padd;
     display: flex;
     gap: 0 8px;
     align-items: center;
@@ -58,20 +62,29 @@ $profile-padd: 16px;
     display: flex;
     flex-wrap: wrap;
     padding: 6px 0;
+    svg {
+      fill: #7F8FA4;
+    }
     &-btn {
       display: flex;
       width: 100%;
       gap: 0 7px;
       padding: 10px 16px;
       cursor: pointer;
-      &:hover {
-        background-color: #EFF3F6;
-      }
+      transition: ease 0.3s;
       p {
+        transition: ease .3s;
         font-family: 'Golos UI';
         font-size: 14px;
         font-weight: 500;
         color: #354052;
+      }
+      &:hover {
+        p, svg {
+          color: #1F8EFA;
+          fill: #1F8EFA;
+        }
+        background-color: #ECF6FF;
       }
     }
   }

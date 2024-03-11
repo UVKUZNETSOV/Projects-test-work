@@ -1,0 +1,22 @@
+$frame-padd: 56px;
+
+.affairs {
+  background-color: #fff;
+  width: 360px;
+  height: 100%;
+  &__header {
+    border-top-left-radius: 10px;
+    height: $frame-padd;
+    background: #EFF3F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    h1 {
+      font-family: 'Golos UI';
+      font-size: 18px;
+      font-weight: 500;
+      color: #273142;
+    }
+  }
+}

@@ -97,6 +97,7 @@ button {
     }
     h2 {
       font-family: "Golos UI";
+      font-size: 18px;
       font-weight: 500;
     }
   }
@@ -111,42 +112,59 @@ button {
     cursor: pointer;
     transition: all .3s;
     &:hover {
-      transform: rotate(90deg);
+      background-color: #3A9EFF;
     }
   }
   .nav {
     display: flex;
     align-items: center;
     height: 100%;
+    gap: 0 10px;
     &__item{
+      padding: 0 3px;
       position: relative;
       transition: 0.3s;
       display: flex;
       align-items: center;
       border-radius: 5px;
-      padding: 0 13px;
+      // padding: 0 13px;
       height: 100%;
       cursor: pointer;
       font-family: "Golos UI";
       font-weight: 500;
       background: transparent;
+      transition: all .3s;
       &:hover {
-        background-color: #354052;
+        color: #1F8EFA;
       }
     }
     
-    &__item.active:before{
+    &__item:hover:before{
       transform-origin: left;
-      transform: scaleX(1);
-      transition: transform 0.25s;
+      opacity: 1;
+      transition: all 0.25s;
+    }
+    
+    &__item:before{
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0px;
+      bottom: 0%;
+      // transform-origin: right;
+      opacity: 0;
+      transition: all 0.25s;
+      background-color: #3A9EFF;
     }
     
     &__item.active:before{
       content: '';
       width: 100%;
-      height: 3px;
+      height: 2px;
       background-color: #3A9EFF;
       position: absolute;
+      opacity: 1;
       left: 0px;
       bottom: 0%;
       transform-origin: right;
@@ -251,7 +269,6 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
   &__frame {
     border: none;
     background-color: #fff;
@@ -278,7 +295,7 @@ button {
     width: 100%;
     background: rgb(223,227,233);
     background: linear-gradient(0deg, rgba(223,227,233,1) 15%, rgba(255,255,255,1) 100%);
-    border-top: 1px solid #DFE3E9;
+    border-top: 2px solid #DFE3E9;
     p {
       color: #7F8FA4;
       font-family: 'Golos UI';
@@ -337,6 +354,10 @@ button {
   height: 40px;
   text-transform: uppercase;
   border-radius: 4px;
+  transition: all .2s;
+  &:hover {
+    background-color: #3A9EFF;
+  }
 }
 
 .head__btn {
@@ -357,4 +378,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.close-btn {
+  cursor: pointer;
 }

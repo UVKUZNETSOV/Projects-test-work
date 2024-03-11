@@ -6,6 +6,7 @@ $frame-padd: 56px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all .3s;
 }
 
 .dropleft-btn {
@@ -18,13 +19,15 @@ $frame-padd: 56px;
 }
 
 .dropleft-content {
-  padding: 5px 0;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   right: $frame-padd;
   flex-direction: column;
   display: none;
   background-color: #fff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 2;
   li {

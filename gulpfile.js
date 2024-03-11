@@ -25,6 +25,7 @@ function styles() {
     'app/scss/dropdown.scss',
     'app/scss/dropleft.scss',
     'app/scss/profile.scss',
+    'app/scss/affairs.scss',
     'app/scss/style.scss'
   ])
     .pipe(concat('style.min.css'))
@@ -39,6 +40,7 @@ function watching() {
     'app/scss/dropdown.scss', 
     'app/scss/dropleft.scss',
     'app/scss/profile.scss',
+    'app/scss/affairs.scss',
     'app/scss/style.scss'
   ], styles)
   watch([
